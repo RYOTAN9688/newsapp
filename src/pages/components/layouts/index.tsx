@@ -1,5 +1,6 @@
 import { ReactNode, VFC } from 'react';
-import styles from './index.module.scss';
+import { Header } from '../header';
+import styles from '../../../styles/Home.module.scss';
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,6 +9,7 @@ interface LayoutProps {
 export const MainLayout: VFC<LayoutProps> = ({ children }) => {
   return (
     <>
+      <Header />
       <main className={styles.main}>{children}</main>
     </>
   );
