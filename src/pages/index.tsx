@@ -1,20 +1,23 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
+import styles from '../styles/Home.module.scss';
 import { Article } from './components/article';
 import { MainLayout } from './components/layouts';
 
 export default function Home(props) {
-  console.log(props.topArticles);
-
   return (
     <>
       <MainLayout>
         <Head>
           <title>NewsApp</title>
         </Head>
-        <div>
-          <Article title='headlines' articles={props.topArticles} />
+        <div className={styles.contents}>
+          <div className={styles.blank}>
+            <div className={styles.main}>
+              <Article title='headlines' articles={props.topArticles} />
+            </div>
+          </div>
         </div>
       </MainLayout>
     </>

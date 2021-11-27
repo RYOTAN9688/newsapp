@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { VFC } from 'react';
+import { Nav } from '../nav';
 
 import styles from './index.module.scss';
 
@@ -27,6 +28,11 @@ export const Header: VFC = () => {
               </a>
             </Link>
           </h1>
+          <div className={styles.nav}>
+            <nav>
+              <Nav />
+            </nav>
+          </div>
         </header>
       </section>
     </>

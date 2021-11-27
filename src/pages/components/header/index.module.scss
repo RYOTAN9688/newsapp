@@ -13,6 +13,7 @@ $breakpoint: 767px;
   width: 100%;
   z-index: 1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: gray;
 }
 
 .header {
@@ -29,6 +30,7 @@ $breakpoint: 767px;
 
 .header_icon {
   display: none;
+  background-color: gray;
   @include media() {
     display: inline-block;
     vertical-align: middle;
