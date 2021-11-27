@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.scss';
 import { Article } from './components/article';
 import { MainLayout } from './components/layouts';
 
+const NewsKey = process.env.NEWSKEY;
+
 export default function Home(props) {
   return (
     <>

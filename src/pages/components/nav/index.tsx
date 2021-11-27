@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from './index.module.scss';
 import { FC } from 'react';
 
-const Topics = [
+const TOPICS = [
   {
     icon: '01',
     path: '/',
@@ -23,7 +23,7 @@ const Topics = [
   {
     icon: '05',
     path: '/topics/entertainment',
-    title: 'Entertaiment',
+    title: 'Entertainment',
   },
   {
     icon: '06',
@@ -36,7 +36,7 @@ export const Nav: FC = () => {
   return (
     <section className={styles.container}>
       <ul className={styles.contents}>
-        {Topics.map((topic, index) => {
+        {TOPICS.map((topic, index) => {
           return (
             <li key={index}>
               <Link href={`${topic.path}`}>
