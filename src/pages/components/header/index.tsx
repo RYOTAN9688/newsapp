@@ -9,7 +9,7 @@ export const Header: VFC = () => {
     <>
       <section className={styles.container}>
         <header className={styles.header}>
-          <div className={styles.header_icon}>
+          <button className={styles.header_icon}>
             <Image
               src='/img/headerIcon/menu.png'
               alt='menu icon'
@@ -18,7 +18,7 @@ export const Header: VFC = () => {
               height={35}
               priority
             />
-          </div>
+          </button>
           <h1 className={styles.typograph}>
             <Link href='/'>
               <a>
