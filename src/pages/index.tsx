@@ -29,7 +29,7 @@ export default function Home(props) {
 export const getStaticProps: GetStaticProps = async () => {
   const pageSize = 10;
   const topRes = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=jp&pageSize=${pageSize}&apiKey=${NewsKey}`,
+    `https://newsapi.org/v2/top-headlines?country=jp&pageSize=${pageSize}&apiKey=${process.env.NEWSKEY}`,
   );
   const topJson = await topRes.json();
   const topArticles = topJson?.articles;
