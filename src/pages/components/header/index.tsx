@@ -22,8 +22,8 @@ export const Header: VFC = () => {
           <h1 className={styles.typograph}>
             <Link href='/'>
               <a>
-                <span className={styles.simple}>Simple</span>
                 <span className={styles.news}>News</span>
+                <span className={styles.app}>App</span>
               </a>
             </Link>
           </h1>
