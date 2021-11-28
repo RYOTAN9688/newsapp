@@ -1,0 +1,18 @@
+.weather {
+  border: 1.2px solid rgba(135, 135, 135, 135);
+  border-radius: 20px;
+  padding: 0 20px 0 20px;
+  margin: 30px 20px 0 20px;
+  h1 {
+    font-weight: 1000;
+    font-size: 16px;
+    color: rgb(0, 133, 104);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(150, 113, 113, 0.5);
+  }
+}
+.weather_main {
+  p {
+    font-weight: 20px;
+  }
+}
