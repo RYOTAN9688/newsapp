@@ -54,3 +54,9 @@ $breakpoint: 767px;
 .app {
   font-weight: 100px;
 }
+
+.nav {
+  @include media() {
+    display: none;
+  }
+}

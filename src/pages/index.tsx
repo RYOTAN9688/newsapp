@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import { Article } from './components/article';
 import { MainLayout } from './components/layouts';
+import { WeatherNews } from './components/weather';
 
 const NewsKey = process.env.NEWSKEY;
 
@@ -21,6 +22,9 @@ export default function Home(props) {
             </div>
           </div>
         </div>
+        <div className={styles.aside}>
+          <WeatherNews />
+        </div>
       </MainLayout>
     </>
   );
@@ -29,10 +33,11 @@ export default function Home(props) {
 export const getStaticProps: GetStaticProps = async () => {
   const pageSize = 10;
   const topRes = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=jp&pageSize=${pageSize}&apiKey=${process.env.NEWSKEY}`,
+    `https://newsapi.org/v2/top-headlines?country=jp&pageSize=${pageSize}&apiKey=${NewsKey}`,
   );
   const topJson = await topRes.json();
   const topArticles = topJson?.articles;
+
   return {
     props: {
       topArticles,
